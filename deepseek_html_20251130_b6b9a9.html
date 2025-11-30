@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash Varma | Operations & Logistics Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+            --light-gray: #f5f7fa;
+            --text: #333;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--light-gray);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.3);
+            box-shadow: var(--shadow);
+        }
+        
+        .profile-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--light);
+        }
+        
+        .quick-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+        
+        section {
+            background: white;
+            margin: 2.5rem 0;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.8rem;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        h2 i {
+            color: var(--secondary);
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+        
+        .job {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.8rem;
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+        
+        .job:last-child {
+            border-bottom: none;
+        }
+        
+        .job::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--secondary);
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company {
+            font-weight: bold;
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+        
+        .date {
+            color: var(--gray);
+            font-style: italic;
+            background: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .location {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        
+        li::marker {
+            color: var(--secondary);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-category h4 i {
+            color: var(--secondary);
+        }
+        
+        .award {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .award:hover {
+            transform: translateX(5px);
+        }
+        
+        .award-title {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .award-title i {
+            color: var(--accent);
+        }
+        
+        .declaration {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            font-style: italic;
+            text-align: center;
+            position: relative;
+            border-top: 3px solid var(--secondary);
+        }
+        
+        .declaration::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--secondary);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 992px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+            }
+            
+            .quick-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .job-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            section {
+                padding: 1.8rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: var(--secondary);
+            border-radius: 4px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .linkedin-link {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .linkedin-link:hover {
+            color: var(--light);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-section">
+                    <!-- Placeholder for profile image -->
+                    <div class="profile-img" style="background: #fff; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-user-tie" style="font-size: 4rem; color: var(--primary);"></i>
+                    </div>
+                    <div class="profile-text">
+                        <h1>Prakash Varma</h1>
+                        <p class="tagline">Operations & Logistics Professional</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>chunchuprakashvarma@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>8919691159 / 9390932373</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://linkedin.com/in/prakash-varma-ba4495276" target="_blank" class="linkedin-link">linkedin.com/in/prakash-varma-ba4495276</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Warangal, Telangana</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quick-links">
+                    <a href="#contact" class="btn">Contact Me</a>
+                    <a href="#experience" class="btn btn-primary">View Experience</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="summary">
+            <h2><i class="fas fa-user-tie"></i> Professional Summary</h2>
+            <p>Highly accomplished Operations & Logistics Professional with 6+ years of experience in Last-Mile Delivery, Hub Operations, Inventory Control, Flow Management, Cash Handling, Team Leadership, and Customer Experience. Proven expertise in Ekart Logistics, Delhivery, Ecom Express, and Cash Logistics with consistent performance in improving productivity, achieving SLA targets, clearing backlogs, and managing large delivery teams. Strong in process optimization, workforce planning, real-time monitoring, and issue escalation control. Actively seeking opportunities across Operations, Logistics, Store/Hub Management, and Team Leader roles.</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">80+</div>
+                    <div class="stat-label">Team Members Led</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.8%</div>
+                    <div class="stat-label">Inventory Accuracy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">35%</div>
+                    <div class="stat-label">Backlog Reduction</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3>Senior Team Lead</h3>
+                    <div class="date">May 2024 - Present</div>
+                </div>
+                <div class="company">Ekart Logistics</div>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Telangana</div>
+                <ul>
+                    <li>Leading 80+ delivery executives and ensuring smooth handling of 2,000-2,200 daily shipments.</li>
+                    <li>Achieved and maintained 88%+ on-time delivery by using route planning and real-time dashboard control.</li>
+                    <li>Reduced total pending and backlog shipments by 35% in 7 months through strict follow-ups and flow optimization.</li>
+                    <li>Ensured 100% accurate reconciliation of ₹15+ lakh daily COD with zero errors.</li>
+                    <li>Managed compliance, daily audits, station performance, and peak-season planning.</li>
+                    <li>Implemented rider training programs that boosted productivity by 25% and reduced escalations.</li>
+                    <li>Monitored NDR, forward flow, RTO, and SLA accuracy with daily MIS reporting.</li>
+                    <li>Developed and implemented performance metrics for delivery executives, resulting in a 15% improvement in overall team efficiency.</li>
+                    <li>Coordinated with cross-functional teams to streamline last-mile operations and reduce delivery TAT by 20%.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3>Hub Incharge</h3>
+                    <div class="date">May 2023 - May 2024</div>
+                </div>
+                <div class="company">Ecom Express Ltd</div>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</div>
+                <ul>
+                    <li>Managed a 13,000+ shipment/month hub with 99.5% on-time dispatch and 99.8% inventory accuracy.</li>
+                    <li>Reduced manpower cost by 15% through shift planning & load balancing.</li>
+                    <li>Conducted daily huddles, process audits, safety checks, and issue resolution.</li>
+                    <li>Handled customer escalations, NDR follow-ups, and special delivery requests.</li>
+                    <li>Coordinated with regional MIS, line-haul, and operations teams to maintain service quality.</li>
+                    <li>Implemented a new sorting system that increased processing speed by 30% and reduced manual errors.</li>
+                    <li>Developed and executed contingency plans for peak seasons, ensuring 100% operational continuity.</li>
+                    <li>Led a team of 15 associates, providing training and mentoring to improve performance and reduce attrition.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3>Team Lead</h3>
+                    <div class="date">Mar 2022 - May 2023</div>
+                </div>
+                <div class="company">Delhivery Pvt Ltd</div>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Warangal</div>
+                <ul>
+                    <li>Led warehouse and last-mile delivery operations with 30+ associates.</li>
+                    <li>Maintained 99.5% stock accuracy with zero audit issues.</li>
+                    <li>Handled ₹20+ lakh collections monthly with 100% accurate closures.</li>
+                    <li>Reduced rider absenteeism by implementing new incentive plans.</li>
+                    <li>Ensured smooth flow even during festival peak days with additional manpower coordination.</li>
+                    <li>Implemented a digital tracking system that improved visibility of shipments and reduced query resolution time by 40%.</li>
+                    <li>Developed and executed training modules for new hires, reducing onboarding time by 25%.</li>
+                    <li>Collaborated with the quality team to implement process improvements that reduced RTO by 18%.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3>Writer Safeguard</h3>
+                    <div class="date">Jan 2019 - Dec 2021</div>
+                </div>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</div>
+                <ul>
+                    <li>Began as Cash Collection Executive handling ₹1 Crore+ daily cash safely.</li>
+                    <li>Later managed secure logistics and cash movement between branches.</li>
+                    <li>Promoted to Assistant Chest Incharge supervising ₹8 Crore+ daily transactions.</li>
+                    <li>Monitored teller staff, ensured zero errors, and followed all compliance standards.</li>
+                    <li>Developed and implemented cash handling procedures that reduced discrepancies by 95%.</li>
+                    <li>Coordinated with banking partners to optimize cash flow and reduce idle cash by 30%.</li>
+                    <li>Trained and mentored 10+ team members on security protocols and cash management best practices.</li>
+                    <li>Implemented a digital reporting system that improved accuracy and reduced reporting time by 50%.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="job">
+                <div class="job-header">
+                    <h3>Bachelor of Commerce (B.Com)</h3>
+                    <div class="date">2020 - 2024</div>
+                </div>
+                <div class="company">Satavahana University</div>
+                <p>Specialized in Accounting and Business Management, gaining comprehensive knowledge in financial principles, business operations, and commercial laws.</p>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3>Diploma in Electrical & Electronics Engineering</h3>
+                    <div class="date">2016 - 2019</div>
+                </div>
+                <div class="company">SBTET</div>
+                <p>Acquired technical skills in electrical systems, electronics, and automation, providing a strong foundation for understanding logistics automation systems.</p>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3>SSC</h3>
+                    <div class="date">2016</div>
+                </div>
+                <div class="company">Telangana Board</div>
+                <p>Completed secondary education with focus on mathematics and sciences, building analytical and problem-solving skills.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2><i class="fas fa-tools"></i> Key Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4><i class="fas fa-shipping-fast"></i> Operations & Logistics</h4>
+                    <ul>
+                        <li>Last Mile Operations</li>
+                        <li>Hub Management</li>
+                        <li>Store & Warehouse Handling</li>
+                        <li>Inventory Accuracy</li>
+                        <li>Route Planning</li>
+                        <li>Supply Chain Management</li>
+                        <li>Logistics Automation</li>
+                        <li>Vendor Management</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4><i class="fas fa-users"></i> Management & Leadership</h4>
+                    <ul>
+                        <li>Team Leadership & Training</li>
+                        <li>NDR & RTO Control</li>
+                        <li>SLA Monitoring</li>
+                        <li>Customer Escalation Management</li>
+                        <li>Process Audits</li>
+                        <li>Performance Management</li>
+                        <li>Strategic Planning</li>
+                        <li>Change Management</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4><i class="fas fa-chart-line"></i> Technical & Financial</h4>
+                    <ul>
+                        <li>Cash Handling & Reconciliation</li>
+                        <li>MIS & Reporting</li>
+                        <li>Data Analysis</li>
+                        <li>Process Optimization</li>
+                        <li>Budget Management</li>
+                        <li>Cost Reduction Strategies</li>
+                        <li>Compliance & Audit</li>
+                        <li>Inventory Management Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2><i class="fas fa-trophy"></i> Awards & Achievements</h2>
+            <div class="award">
+                <div class="award-title"><i class="fas fa-award"></i> Best Supporting Employee of the Year - Ekart (2024)</div>
+                <p>Awarded for role in reducing 85% of backlog, improving on-time delivery by 15%, strengthening multi-hub coordination, and maintaining exceptional flow control. Recognized for exceptional leadership during peak season operations.</p>
+            </div>
+            <div class="award">
+                <div class="award-title"><i class="fas fa-star"></i> Operational Excellence Award - Ecom Express (2023)</div>
+                <p>Recognized for implementing process improvements that increased hub efficiency by 25% and reduced operational costs by 15% while maintaining 99.8% service quality standards.</p>
+            </div>
+            <div class="award">
+                <div class="award-title"><i class="fas fa-medal"></i> Zero Error Certification - Writer Safeguard (2021)</div>
+                <p>Achieved perfect audit score for three consecutive years with zero discrepancies in cash handling and compliance procedures, managing transactions worth over ₹8 Crore daily.</p>
+            </div>
+            <div class="award">
+                <div class="award-title"><i class="fas fa-certificate"></i> Performance Excellence - Delhivery (2022)</div>
+                <p>Recognized for outstanding team leadership and achieving 99.5% inventory accuracy while reducing operational costs by 18% through efficient resource allocation.</p>
+            </div>
+        </section>
+
+        <section id="declaration">
+            <h2><i class="fas fa-file-signature"></i> Self Declaration</h2>
+            <div class="declaration">
+                I hereby declare that all the information provided above is true and correct to the best of my knowledge. I take full responsibility for the accuracy of the details mentioned in this resume.
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Get In Touch</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>chunchuprakashvarma@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>8919691159 / 9390932373</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/prakash-varma-ba4495276" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+                <p class="copyright">&copy; 2024 Prakash Varma. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
